@@ -1,16 +1,17 @@
-import prisma from '../../../../prisma';
-import bcrypt from 'bcrypt';
+import { NextResponse } from 'next/server';
+import prisma from '../../../../../prisma';
+import bcrypt from 'bcryptjs';
 
-export default async (req: any, res: any) => {
-  try {
-    const { email, password } = req.body;
+export async function POST(req: any) {
+    try {
+    const { email, password } = await req.json();
 
     // Find the user by email
     const user = await prisma.user.findUnique({ where: { email } });
 
     // If user doesn't exist, return a 404 error
     if (!user) {
-      return res.status(404).json({ success: false, message: 'User not found' });
+      return NextResponse.json({ success: false, message: 'User not found' });
     }
 
     // Compare the entered password with the hashed password in the database
@@ -18,13 +19,13 @@ export default async (req: any, res: any) => {
 
     // If passwords match, return success
     if (passwordMatch) {
-      return res.status(200).json({ success: true, user });
+      return NextResponse.json({ success: true, user });
     } else {
       // If passwords don't match, return a 401 unauthorized error
-      return res.status(401).json({ success: false, message: 'Invalid password' });
+      return NextResponse.json({ success: false, message: 'Invalid CREDENTIALS' }, { status: 401 });
     }
   } catch (error) {
     // Handle any unexpected errors
-    return res.status(500).json({ success: false, message: 'Internal Server Error' });
+    return NextResponse.json({ success: false, message: 'Internal Server Error' });
   }
 };

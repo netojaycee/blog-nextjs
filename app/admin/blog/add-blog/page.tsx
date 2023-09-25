@@ -5,14 +5,15 @@ import {
   Input,
   Button,
   Typography,
+  Textarea,
 } from "@material-tailwind/react";
 import { FormEvent, useState  } from "react";
 import axios from 'axios';
 
 
 
-export default function Login() {
-const [formData, setformData] = useState({email: '', password: ''})
+export default function AddBlog() {
+const [formData, setformData] = useState({title: '', description: '', image: ''})
 
 
 const handleSubmit = async (e:FormEvent) => {
@@ -20,14 +21,14 @@ const handleSubmit = async (e:FormEvent) => {
   // console.log(formData);
 
   try {
-    const response = await axios.post('/api/auth/admin/login', formData);
-    console.log(response.data, 'response');  
-    if (response.data.success) {
-      console.log('login successful!', response.data.user);
-    } else {
-      console.log('failed');
-      console.error('login failed:', response.data.message);
-    }
+    const response = await axios.post('/api/auth/admin/register', formData);
+
+    // if (response.data.success) {
+    //   console.log('Registration successful!', response.data.user);
+    // } else {
+    //   console.log('failed');
+    //   console.error('Registration failed:', response.data.message);
+    // }
   
   }
    catch (error) {
@@ -46,21 +47,22 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
   return (
     <Card color="transparent" shadow={false} className="items-center">
       <Typography variant="h4" color="blue-gray">
-       Admin Sign In
+       Admin
       </Typography>
       <Typography color="gray" className="mt-1 font-normal">
-        Enter your details to login.
+        Add Blog Posts Here
       </Typography>
       <form onSubmit={handleSubmit} className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96">
         <div className="mb-4 flex flex-col gap-6">
-          <Input size="lg" label="Email" type="email" name="email" crossOrigin={''}  onChange={handleChange}  value={formData.email} />
-          <Input type="password" size="lg" label="Password" name="password" onChange={handleChange}   value={formData.password} crossOrigin={''} />
+          <Input size="lg" name="title" type="text" id="title" label="Title" onChange={handleChange} value={formData.title} crossOrigin={''}/>
+          <Textarea size="lg" label="Description" name="description" value={formData.description} />
+          <Input type="file" size="lg" label="Image" name="image" onChange={handleChange}   value={formData.image} crossOrigin={''} />
         </div>
         
         <Button type="submit" className="mt-6" fullWidth>
-          Login
+          Add Blog
         </Button>
-        
+       
       </form>
     </Card>
   );

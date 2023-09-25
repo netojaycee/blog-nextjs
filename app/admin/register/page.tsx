@@ -21,13 +21,13 @@ const handleSubmit = async (e:FormEvent) => {
 
   try {
     const response = await axios.post('/api/auth/admin/register', formData);
-
-    // if (response.data.success) {
-    //   console.log('Registration successful!', response.data.user);
-    // } else {
-    //   console.log('failed');
-    //   console.error('Registration failed:', response.data.message);
-    // }
+    console.log(response.data, 'response');  
+    if (response.data.success) {
+      console.log('Registration successful!', response.data.user);
+    } else {
+      console.log('failed');
+      console.error('Registration failed:', response.data.message);
+    }
   
   }
    catch (error) {
