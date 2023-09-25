@@ -1,5 +1,7 @@
+// @ts-nocheck
 import { NextRequest, NextResponse } from "next/server";
 import prisma from '../../../../../../prisma';
+import ts from "typescript";
 
 
 export const GET = async (req: NextRequest, res: NextResponse) => {
