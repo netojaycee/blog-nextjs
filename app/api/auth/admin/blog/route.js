@@ -1,12 +1,11 @@
-import { NextRequest, NextResponse } from "next/server";
-import prisma from '../../../../../prisma';
+import { NextResponse } from "next/server";
+import prisma from '../../../../libs/prismadb';
 
-export const GET = async (req: NextRequest, res: NextResponse) => {
+export const GET = async () => {
     try {
-        // Get all blogs
         const blogs = await prisma.blog.findMany({
           orderBy: {
-            createdAt: 'desc',
+            createdAt: 'asc',
           },
           select: {
             id: true,
@@ -18,23 +17,18 @@ export const GET = async (req: NextRequest, res: NextResponse) => {
           },
         });
     
-        // Return success response
         return NextResponse.json({ success: true, blogs });
-      } catch (error) {
-        // Handle any unexpected errors
+      } catch (err) {
         return NextResponse.json({ success: false, message: 'Internal Server Error' });
       }
     };
 
-export const POST = async (req: NextRequest, res: NextResponse) => {
+export const POST = async (request) => {
     try {
-        const { title, description, imageUrl } = await req.json();
-            // return NextResponse.json(await req.json());
-         
-    
-    
+      const body = await request.json();
+      const { title, description, imageUrl } = body;         
         // Create a new blog
-        const blog = await prisma.blog.create({
+      const newBlog = await prisma.blog.create({
           data: {
             title,
             description,
@@ -51,9 +45,9 @@ export const POST = async (req: NextRequest, res: NextResponse) => {
         });
     
         // Return success response
-        return NextResponse.json({ success: true, blog }, { status: 200});
+        return NextResponse.json({ success: true, newBlog }, { status: 200});
       } 
-      catch (error) {
+      catch (err) {
        return NextResponse.json({ success: false, message: 'Internal Server Error' }, { status: 500});
       }
     };
