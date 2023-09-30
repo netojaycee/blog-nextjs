@@ -17,7 +17,7 @@ export default function page() {
       <PricingCard
           title="Basic Plan"
           headerColor="white"
-          textColor="purple"
+          textColor="text-primary"
           headerVariant="gradient"
           items={[
             "Follow your clients progress",
@@ -28,7 +28,7 @@ export default function page() {
 <PricingCard
           title="Api Plan"
           headerColor="white"
-          textColor="purple"
+          textColor="text-primary"
           headerVariant="filled"
           items={[
             "Follow your clients progress",
@@ -41,7 +41,7 @@ export default function page() {
 
 <PricingCard
           title="Premium Plan"
-          headerColor="purple"
+          headerColor="bg-primary"
           textColor="white"
           headerVariant="filled"
           items={[

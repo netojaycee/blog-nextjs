@@ -1,3 +1,4 @@
+'use client'
 import Image from 'next/image';
 import React from 'react';
 import { Typography } from "@material-tailwind/react";
@@ -12,7 +13,7 @@ const Footer = () => {
             <li>
               <Typography
                 as="a"
-                href="#"
+                href="/privacy-policy"
                 color="white"
                 className="font-normal transition-colors hover:text-blue-500 focus:text-blue-500"
               >
@@ -22,7 +23,7 @@ const Footer = () => {
             <li>
               <Typography
                 as="a"
-                href="#"
+                href="/ruby-api-license"
                 color="white"
                 className="font-normal transition-colors hover:text-blue-500 focus:text-blue-500"
               >
@@ -32,7 +33,7 @@ const Footer = () => {
             <li>
               <Typography
                 as="a"
-                href="#"
+                href="https://demo.mhapy.com"
                 color="white"
                 className="font-normal transition-colors hover:text-blue-500 focus:text-blue-500"
               >
