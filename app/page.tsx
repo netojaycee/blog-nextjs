@@ -9,14 +9,14 @@ import Footer from '../components/Home/Footer'
 export default function Home() {
   return (
     <main className=''>
-      <h1 className='title p-0 mt-8 text-3xl font-bold underline'>
+      
         <Hero />
         <Features />
         <Mental />
         <Whats />
         <Faqs/>
         <Footer/>
-      </h1>
+      
     </main>
   )
 }
