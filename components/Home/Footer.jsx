@@ -6,9 +6,9 @@ import { Typography } from "@material-tailwind/react";
 const Footer = () => {
   return (
     <section className="w-full relative flex flex-col rounded-3xl bg-primary text-white my-10">
-      <footer className="w-full pb-8 px-8">
-        <div className="flex flex-row w-full justify-between items-center justify-center  gap-x-12 bg-transparent  text-center md:justify-between">
-          <ul className="flex w-full flex-wrap items-center tex gap-y-2 gap-x-8">
+      <footer className="w-full py-8  px-8">
+        <div className="flex md:flex-row flex-col w-full justify-between items-center justify-center  gap-x-12 bg-transparent  text-center md:justify-between">
+          <ul className="flex w-full flex-wrap items-center text-center tex gap-y-2 gap-x-8">
 
             <li>
               <Typography
@@ -41,17 +41,17 @@ const Footer = () => {
               </Typography>
             </li>
           </ul>
-          <div class="flex justify-end pt-4 mb-10 gap-[10px] w-full">
-            <a href="" class="flex px-[20px] gap-2 border-2 justify-center items-center h-fit rounded-lg shadow-inner py-2 md:text-[12px] text-[10px] bg-black text-white" role="button">
-              <img data-aos="slide-left" height={10} width={10} src="https://i.imgur.io/6Qf5V8c_d.webp" className="w-5 h-fit" alt="playstore" />
+          <div class="flex md:flex-row flex-col justify-end pt-4 mb-10 gap-[10px] w-full">
+            <a href="" class="flex px-[20px] gap-2 border justify-center items-center h-fit rounded-lg shadow-inner py-2 md:text-[12px] text-[10px] bg-black text-white" role="button">
+              <img data-aos="slide-left" height={10} width={10} src="https://i.imgur.io/6Qf5V8c_d.webp" className="w-10 h-fit" alt="playstore" />
               <div className="leading-3">
                 <p>Get it on</p>
                 <h4 className="font-bold text-xl">Google Play</h4>
               </div>
             </a>
 
-            <a href="" className="flex px-[20px] gap-2 border-2 justify-center border-black items-center h-fit rounded-lg shadow-inner py-2 md:text-[12px] text-[10px]" role="button">
-              <img src="https://i.imgur.io/H4bHBxx_d.webp" height={10} width={10} className="w-5 h-fit" alt="apple store" />
+            <a href="" className="flex px-[20px] gap-2 border justify-center border-black items-center bg-white text-black h-fit rounded-lg shadow-inner py-2 md:text-[12px] text-[10px]" role="button">
+              <img src="https://i.imgur.io/H4bHBxx_d.webp" height={10} width={10} className="w-10 h-fit" alt="apple store" />
               <div data-aos="fade-up" className="leading-3">
                 <p>Download on</p>
                 <h4 className="font-bold text-xl">Apple store</h4>
@@ -61,8 +61,8 @@ const Footer = () => {
 
         </div>
         <hr className="my-8 border-blue-gray-50" />
-        <div className="flex justify-between">
-        <div className="flex gap-4 text-white sm:justify-center">
+        <div className="flex flex-col md:flex-row justify-center md:justify-between">
+          <div className="flex gap-4 text-white text-center justify-center sm:justify-center">
             <Typography as="a" href="https://m.facebook.com/mentalhealthaccountability" className="opacity-80 transition-opacity hover:opacity-100">
               <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path
@@ -105,7 +105,7 @@ const Footer = () => {
               </svg>
             </Typography>
           </div>
-          
+
           <Typography color="White" className="text-center font-normal">
             &copy; 2023 mhapy. All Rights Reserved.
           </Typography>

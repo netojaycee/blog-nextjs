@@ -5,16 +5,16 @@ import { PricingCard } from '../../components/PricingCard'
 export default function page() {
   return (
     <>
-    <div className='column'>
-      <h2 className='p-11'>Pricing Plan</h2>
-    <h3 className='page-title p-6'>mhapy is absolutely Free for Individuals</h3>
-    <div className='p-6'>
-    <p>Are you a psychotherapist with a private practice? Do you provide mental health support of any kind?</p>
-    <p>All plans have a monthly payment schedule.</p>
-    </div>
-    </div>
+      <div className='column'>
+        <h2 className='p-11'>Pricing Plan</h2>
+        <h3 className='page-title p-6'>mhapy is absolutely Free for Individuals</h3>
+        <div className='p-6'>
+          <p>Are you a psychotherapist with a private practice? Do you provide mental health support of any kind?</p>
+          <p>All plans have a monthly payment schedule.</p>
+        </div>
+      </div>
       <div className='flex flex-row gap-11'>
-      <PricingCard
+        <PricingCard
           title="Basic Plan"
           headerColor="white"
           textColor="text-primary"
@@ -25,7 +25,7 @@ export default function page() {
           price="120"
           buttonText="Contact Us" />
 
-<PricingCard
+        <PricingCard
           title="Api Plan"
           headerColor="white"
           textColor="text-primary"
@@ -39,7 +39,7 @@ export default function page() {
           buttonText="Contact Us" />
 
 
-<PricingCard
+        <PricingCard
           title="Premium Plan"
           headerColor="bg-primary"
           textColor="white"
@@ -53,7 +53,7 @@ export default function page() {
           buttonText="Contact Us" />
 
 
-    </div>
+      </div>
     </>
   )
 }
