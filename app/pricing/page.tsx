@@ -6,18 +6,18 @@ export default function page() {
   return (
     <>
       <div className='column'>
-        <h2 className='p-11'>Pricing Plan</h2>
-        <h3 className='page-title p-6'>mhapy is absolutely Free for Individuals</h3>
-        <div className='p-6'>
+        <h2 className='p-11 text-3xl'>Pricing Plan</h2>
+        <p className='page-titl md:text4-xl text-2xl text-center text-primary  font-bold my-4'>Mhapy is absolutely Free for Individuals</p>
+        <div className='text-center py '>
           <p>Are you a psychotherapist with a private practice? Do you provide mental health support of any kind?</p>
           <p>All plans have a monthly payment schedule.</p>
         </div>
       </div>
-      <div className='flex flex-row gap-11'>
+      <div className='flex flex-col lg:flex-row py-10 gap-11 justify-center'>
         <PricingCard
           title="Basic Plan"
           headerColor="white"
-          textColor="text-primary"
+          textColor=""
           headerVariant="gradient"
           items={[
             "Follow your clients progress",
@@ -28,7 +28,7 @@ export default function page() {
         <PricingCard
           title="Api Plan"
           headerColor="white"
-          textColor="text-primary"
+          textColor=""
           headerVariant="filled"
           items={[
             "Follow your clients progress",
@@ -41,8 +41,8 @@ export default function page() {
 
         <PricingCard
           title="Premium Plan"
-          headerColor="bg-primary"
-          textColor="white"
+          headerColor="white"
+          textColor=""
           headerVariant="filled"
           items={[
             "Follow your clients progress",
