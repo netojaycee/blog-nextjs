@@ -1,17 +1,22 @@
 import { Card } from '@material-tailwind/react';
 import Image from 'next/image';
-import React from 'react';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Faqs = () => {
+    useEffect(() => {
+        AOS.init();
+      }, [])
     return (
         <section className="w-full relative flex flex-col md:my-10 my-60 bg-primary-500 justify-center items-center">
-            <Image src={'/images/card-bg-right.png'} alt='logo' className='right-20  absolute' height={500} width={500} priority={true} />
-            <h1 className="font-bold mt-40 text-primary text-4xl md:text-5xl text-center md:text-5xl flex">
+            <Image src={'/images/card-bg-right.png'} alt='logo' className='-right-20 bottom-1 absolute' height={500} width={500} priority={true} />
+            <h1 className="font-bold mt-40 text-primary text-4xl md:text-5xl text-center md:text-5xl flex" data-aos="fade-in">
                 Frequently Asked Questions?
             </h1>
 
-            <div className="grid md:grid-cols-2 grid-cols-1 md:px-20 py-8 gap-4 ">
-                <Card className='p-8  gap-6 border flex md:flex-row shadow-2xl rounded-3xl justify-start'>
+            <div className="grid md:grid-cols-2 grid-cols-1 md:px-20 py-8 gap-4 "data-aos="fade-in">
+                <Card className='p-8  gap-6 border flex md:flex-row shadow-2xl rounded-3xl justify-start' data-aos="zoom-left">
                     <h1 className="text-8xl text-primary">01</h1>
                     <div className="flex flex-col gap-4">
                         <h1 className="text-base font-bold text-black">Is Mhapy Clinically Validated?</h1>
@@ -20,7 +25,7 @@ const Faqs = () => {
 
                 </Card>
 
-                <Card className='p-8  gap-6 border flex md:flex-row shadow-2xl rounded-3xl justify-start'>
+                <Card className='p-8  gap-6 border flex md:flex-row shadow-2xl rounded-3xl justify-start' data-aos="zoom-right">
                     <h1 className="text-8xl text-primary">02</h1>
                     <div className="flex flex-col gap-4">
                         <h1 className="text-base font-bold text-black">Can I find a Therapist on Mhapy?</h1>
@@ -28,7 +33,7 @@ const Faqs = () => {
                     </div>
 
                 </Card>
-                <Card className='p-8  gap-6 border flex md:flex-row shadow-2xl rounded-3xl justify-start'>
+                <Card className='p-8  gap-6 border flex md:flex-row shadow-2xl rounded-3xl justify-start' data-aos="zoom-left">
                     <h1 className="text-8xl text-primary">03</h1>
                     <div className="flex flex-col gap-4">
                         <h1 className="text-base font-bold text-black">What is the Privacy Policy?</h1>
@@ -36,15 +41,15 @@ const Faqs = () => {
                     </div>
 
                 </Card>
-                <Card className='p-8  gap-6 border flex md:flex-row shadow-2xl rounded-3xl justify-start'>
+                <Card className='p-8  gap-6 border flex md:flex-row shadow-2xl rounded-3xl justify-start' data-aos="zoom-right">
                     <h1 className="text-8xl text-primary">04</h1>
                     <div className="flex flex-col gap-4">
                         <h1 className="text-base font-bold text-black">What are the rules for what I can share on the platform?</h1>
                         <p className=' leading-6 text-base font-normal'>Amhapy is committed to being a safe space for you to fully express yourself. do not hesitate to report any comment you find offensive. We do not tolerate any kind of harassment. No hate speech or bullying. Be kind and courteous and respect everyone’s privacy.</p>
                     </div>
 
-                </Card>
-                <Card className='p-8  gap-6 border flex md:flex-row shadow-2xl rounded-3xl justify-start'>
+                </Card> 
+                <Card className='p-8  gap-6 border flex md:flex-row shadow-2xl rounded-3xl justify-start' data-aos="zoom-left">
                     <h1 className="text-8xl text-primary">05</h1>
                     <div className="flex flex-col gap-4">
                         <h1 className="text-base font-bold text-black">How many Accountability Partners Do I Need?</h1>
@@ -52,7 +57,7 @@ const Faqs = () => {
                     </div>
 
                 </Card>
-                <Card className='p-8  gap-6 border flex md:flex-row shadow-2xl rounded-3xl justify-start'>
+                <Card className='p-8  gap-6 border flex md:flex-row shadow-2xl rounded-3xl justify-start' data-aos="zoom-left">
                     <h1 className="text-8xl text-primary">06</h1>
                     <div className="flex flex-col gap-4">
                         <h1 className="text-base font-bold text-black">Is mhapy for me?</h1>
