@@ -10,7 +10,7 @@ const Faqs = () => {
       }, [])
     return (
         <section className="w-full relative flex flex-col md:my-10 my-60 bg-primary-500 justify-center items-center">
-            <Image src={'/images/card-bg-right.png'} alt='logo' className='-right-20 bottom-1 absolute' height={500} width={500} priority={true} />
+            <Image src={'/images/card-bg-right.png'} alt='logo' className='-right-20 bottom-1 absolute' height={500} width={500} priority={true} data-aos="slide-right"/>
             <h1 className="font-bold mt-40 text-primary text-4xl md:text-5xl text-center md:text-5xl flex" data-aos="fade-in">
                 Frequently Asked Questions?
             </h1>
