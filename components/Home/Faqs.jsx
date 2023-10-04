@@ -1,3 +1,4 @@
+'use client'
 import { Card } from '@material-tailwind/react';
 import Image from 'next/image';
 import React, { useEffect } from 'react';
@@ -29,7 +30,7 @@ const Faqs = () => {
                     <h1 className="text-8xl text-primary">02</h1>
                     <div className="flex flex-col gap-4">
                         <h1 className="text-base font-bold text-black">Can I find a Therapist on Mhapy?</h1>
-                        <p className=' leading-6 text-base font-normal'>AWe are working on an update that will allow you to use mhapy to find therapists in your area. We can not wait to share this with you.</p>
+                        <p className=' leading-6 text-base font-normal'>We are working on an update that will allow you to use mhapy to find therapists in your area. We can not wait to share this with you.</p>
                     </div>
 
                 </Card>
@@ -53,7 +54,7 @@ const Faqs = () => {
                     <h1 className="text-8xl text-primary">05</h1>
                     <div className="flex flex-col gap-4">
                         <h1 className="text-base font-bold text-black">How many Accountability Partners Do I Need?</h1>
-                        <p className=' leading-6 text-base font-normal'>AQuality is better than quantity. We recommend that you start with only 3-5 accountability partners and cultivate meaningful relationships with them. However, we do not put any limits on how many peers you can have as accountability partners.</p>
+                        <p className=' leading-6 text-base font-normal'>Quality is better than quantity. We recommend that you start with only 3-5 accountability partners and cultivate meaningful relationships with them. However, we do not put any limits on how many peers you can have as accountability partners.</p>
                     </div>
 
                 </Card>
