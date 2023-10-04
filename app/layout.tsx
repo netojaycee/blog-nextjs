@@ -17,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className='mx-auto w-10/12'>
+      <body className='mx-auto w-11/12'>
       <Nav />
 
         {children}

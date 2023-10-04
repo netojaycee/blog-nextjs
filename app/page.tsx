@@ -8,14 +8,13 @@ import Faqs from '../components/Home/Faqs'
 
 export default function Home() {
   return (
-    <main className='lg:px-40'>
+    <main className='overflow-x-hidden'>
       
         <Hero />
         <Features />
         <Mental />
         <Whats />
         <Faqs/>
-      
     </main>
   )
 }
