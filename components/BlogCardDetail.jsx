@@ -64,24 +64,3 @@ export function BlogCardDetail({ title, imageUrl, description, createdAt, update
     );
 }
 
-// export async function getServerSideProps(context) {
-//     const { id } = context.query;
-  
-//     try {
-//       const response = await fetch(`/api/posts/${id}`);
-//       if (!response.ok) {
-//         throw new Error('Network response was not ok');
-//       }
-  
-//       const post = await response.json();
-  
-//       return {
-//         props: { post },
-//       };
-//     } catch (error) {
-//       console.error('Error fetching blog post:', error);
-//       return {
-//         notFound: true,
-//       };
-//     }
-//   }
