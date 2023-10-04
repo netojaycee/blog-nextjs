@@ -13,7 +13,7 @@ export default function page() {
           <p>All plans have a monthly payment schedule.</p>
         </div>
       </div>
-      <div className='flex flex-col lg:flex-row py-10 gap-11 justify-center'>
+      <div className='flex flex-col sm:flex-row flex-wrap gap-10 md:flex-row py-10 justify-center'>
         <PricingCard
           title="Basic Plan"
           headerColor="white"

@@ -22,7 +22,7 @@ export function Nav() {
   }, []);
  
   const navList = (
-    <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
+    <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 md:flex-row lg:flex-row lg:items-center lg:gap-6">
       <Typography
         as="li"
         variant="small"
@@ -72,17 +72,17 @@ export function Nav() {
         <div className="flex items-center justify-between text-blue-gray-900">
           <Image src={'/images/logo.svg'} alt='logo' height={50} width={209} priority={true} />
           <div className="flex items-center gap-4">
-            <div className="mr-4 hidden lg:block">{navList}</div>
+            <div className="mr-4 hidden md:block">{navList}</div>
             <Button
               variant="gradient"
               size="sm"
-              className="hidden lg:inline-block"
+              className="hidden md:inline-block"
             >
               <span>Get Started</span>
             </Button>
             <IconButton
               variant="text"
-              className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
+              className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent md:hidden"
               ripple={false}
               onClick={() => setOpenNav(!openNav)}
             >
