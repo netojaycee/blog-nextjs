@@ -8,7 +8,7 @@ import { useParams } from 'next/navigation';
 export default function page() {
   const [blog, setBlog] = useState([]);
   const { id } = useParams();
-  const API = `http://localhost:3000/api/auth/admin/blog/${id}`
+  const API = `/api/auth/admin/blog/${id}`
 
   useEffect(() => {
     const getPostById = async () => {
