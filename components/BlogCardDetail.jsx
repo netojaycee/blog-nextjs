@@ -9,29 +9,25 @@ import {
 } from "@material-tailwind/react";
 // import { useRouter } from 'next/router';
 
-export function BlogCardDetail({ title, imageUrl, description, createdAt, updatedAt }) {
+export function BlogCardDetail({ title, imageUrl, description,author,more, createdAt, updatedAt }) {
     return (
         <div className="flex flex-col">
             <div className="flex justify-center gap-4">
-                <p className="text-blue-500">Crreated at{createdAt}</p>
+                <p className="text-blue-500">{(new Date(createdAt).toLocaleString())}s</p>
                 <p className="text-blue-500">2mins read</p>
             </div>
-            <h1 className='pt-10 pb-20 text-center text-4xl font-bold lg:text-5xl'>From Our Blog</h1>
+            <h1 className='pt-10 pb-20 text-center text-4xl font-bold lg:text-5xl'>{title}</h1>
             <Card className="w-full bg-transparent shadow-none">
                 <CardHeader shadow={false} floated={false} className="h-96">
-                    <img
-                        src="https://images.unsplash.com/photo-1629367494173-c78a56567877?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=927&q=80"
-                        alt="card-image"
-                        className="h-full w-full object-cover shadow-lg rounded-3xl"
-                    />
+                    {imageUrl}
                 </CardHeader>
                 <CardBody>
                     <div className="mb-2 flex items-center justify-between">
                         <Typography color="blue" className="font-medium">
-                            Jerry Eni
+                            {author}
                         </Typography>
                         <Typography color="blue" className="font-medium">
-                            $95.00
+                           {more}
                         </Typography>
                     </div>
                     <Typography
@@ -39,8 +35,7 @@ export function BlogCardDetail({ title, imageUrl, description, createdAt, update
                         color="gray"
                         className="font-normal opacity-75"
                     >
-                        With plenty of talk and listen time, voice-activated Siri access, and
-                        an available wireless charging case.
+                       {description}
                     </Typography>
                 </CardBody>
                 <CardFooter className="pt-0 flex justify-between gap-4 w-full">
