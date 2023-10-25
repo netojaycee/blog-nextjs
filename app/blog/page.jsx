@@ -32,7 +32,7 @@ export default function page() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
           {/* <CardBlog /> */}
           {blogs.map((blog) => (
-            <BlogCard key={blog.id} title={<Link href={`/blog/${blog.id}`}>{blog.title} </Link>} description={blog.description} createdAt={(new Date(blog.createdAt).toLocaleString())} imageUrl={blog.imageUrl} />
+            <BlogCard key={blog.id} title={<Link href={`/blog/${blog.id}`}>{blog.title} </Link>} description={blog.description} createdAt={(new Date(blog.createdAt).toLocaleDateString("en-US"))} imageUrl={blog.imageUrl} />
           ))}
 
         </div>
